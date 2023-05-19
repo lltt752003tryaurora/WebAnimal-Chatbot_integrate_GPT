@@ -57,7 +57,6 @@ const chatGptEndpoint = 'https://api.openai.com/v1/engines/text-davinci-002/comp
 const chat = async (message) => {
   const prompt = `Question: ${message}\nAnswer: `;
   
-  //const prompt = `${message}\n`;
   const data = {
     'prompt': prompt,
     'max_tokens': 1024, //50-100
@@ -79,17 +78,6 @@ const chat = async (message) => {
   return answer;
 };
 
-// const generatePrompt = async (message) => {
-//   let introduction = "You are helpful,polite,and professional. You only greeting only one times. You are a zoologist and expert in this field. You just anwser information about animals. Any questions contain another information which is not involving in animals you have not to anwser.If you do not know or do not anwser you say I'm sorry. I am a zoologist. I can not answer another question which is not involving this.";
-  
-//   message.forEach((entry) => {
-//     const chatLine = `Question: ${entry}\nAnswer: `;
-//     introduction += chatLine;
-//   })
-  
-//   const answer = await chat(introduction);
-//   return answer;
-// }
 
 const botVoice = async (message) => {
 
@@ -133,4 +121,3 @@ form.onsubmit = (e) => {
   }
 };
 
-// it has a problem. It response a lot of answers in 1 time. It automatic give the questions which related the question previous and automatic response
