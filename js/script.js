@@ -46,7 +46,7 @@ const btn = document.getElementById('btn');
 const form = document.getElementById('form');
 const chatbot_response_typing = document.getElementById('chatbot-response-typing');
 
-const apiKey = "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";
+const apiKey = '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';
 
 const headers = {
   'Content-Type': 'application/json',
